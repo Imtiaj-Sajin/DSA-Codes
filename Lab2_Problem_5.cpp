@@ -2,21 +2,27 @@
 using namespace std;
 int main()
 {
-    int count=0,flag=0;
-    int Array_1[10] = {8,4,6,1,6,9,6,1,9,8};
+    int count=0,j=0;
+    int Array_1[10] = {8,4,6,1,6,9,6,1,8,8};
 
     for(int i=0;i<10;i++)
-    {
-  
-      
-        for(int j=0;j<10;j++)
+    {      
+        for( j=0;j<10;j++)
         {
           if(Array_1[i]==Array_1[j])
             {
             count++;
             }
         }
-        cout<<Array_1[i]<<" occurs "<<count<<" times"<<endl;
+        for(j=i+1;j<10;j++)
+        {
+          if(Array_1[i]==Array_1[j])
+          {
+              break;
+          }
+        }
+        if(j==10)
+          cout<<Array_1[i]<<" occurs "<<count<<" times"<<endl;
 
         count=0;
 
