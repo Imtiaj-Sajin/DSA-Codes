@@ -24,7 +24,7 @@ for(i=0;i<10;i++)
     }
 }
     if(k==10){
-        cout<<"Already unique element";
+        cout<<"Already unique.";
     }
     else
     {
