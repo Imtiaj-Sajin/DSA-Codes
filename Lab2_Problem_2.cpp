@@ -4,7 +4,7 @@ int main(){
     int x=0;
     int arr1 [6];
     int arr2 [5];
-    int arr3[12];
+    int arr3[11];
     cout<<"Input array 1: "<<endl;
       for(int j=0;j<6;j++)
     {
@@ -19,16 +19,18 @@ int main(){
        cin>>arr2[j];
     }
     for(int i=0; i<6;i++){
-        for(int j=0; j<6;j++){
+        for(int j=0; j<5;j++){
             if(arr1[i]==arr2[j]){
                 arr3[x]=arr1[i];
             x++;
             }
         }
     }
-    if(x!=0)
+    if(x!=0){
+    cout<<"Common Elements:";
     for(int i=0; i<x;i++)
-        cout<<"Common Elements"<<arr3[i]<<",";
+        cout<<arr3[i]<<" ";
+    }
     else
         cout<<"No common element!";
 
