@@ -16,21 +16,23 @@ cout<<"Enter how much char you wanna skip:";
     {
         i=i+a;
         c=s[i];
+        int k=(int)c;
 
-        if(c>='a'&&c<='z')
+        if(c>='a'&& c<='z')
         {
 
-            c=c+2;
+            k=k+2;
             if(c>'z')
-            c=c-'z'+'a'-1;
-            s[i]=c;
+            k=k-'z'+'a'-1;
+            s[i]=(char)k;
         }
         else if(c>='A'&&c<='Z')
-            c=c+2;
+        {
+            k=k+2;
             if(c>'Z')
-                c=c-'Z'+'A'-1;
-            s[i]=c;
-
+            k=k-'Z'+'A'-1;
+            s[i]=(char)k;
+        }
     }
     cout<<s;
 
