@@ -30,24 +30,32 @@ public:
 
 int main()
 {
-    Student s[5]={Student("sajins",22,3.94,20),Student("wahidz",45,3.99,31),Student("rafz",54,4,30),Student("shaonz",4,3.85,35),Student("shaks",99,3.69,36)};
+    Student s[5]={Student("sajins",22,3.94,20),Student("wahidz",45,3.90,31),Student("rafz",54,4,30),Student("shaonz",4,5.85,35),Student("shaks",99,6.69,36)};
 
-    cout<<"Options:(input any)"<<endl;
-    cout<<"1)Unsorted Data\n2)Credit Wise sort\n3)CGPA Wise\n4)Total Passes"<<endl;
-   int option;
+    int option;
+    int count=0;
+    do{
+
+    cout<<"What operation do you want to perform?Select option number.Enter 0 to exit"<<endl;
+    cout<<"1)Unsorted Data\n2)Credit Wise sort\n3)CGPA Wise\n4)Total Passes\n5)Search With CGPA"<<endl;
     cin>>option;
     switch(option)
     {
+    case 0:
+        break;
 
     case 1:
-        for(int i=0;i<5;i++)
         {
+        for(int i=0;i<5;i++)
+          {
             s[i].display();
             cout<<"\n";
+          }
+        break;
         }
-    break;
 
     case 2:
+        {
         int minIndex =0;
         cout<<endl<<"---------"<<endl;
         cout<<"Your sorted values: "<<endl;
@@ -69,36 +77,63 @@ int main()
             cout<<"\n";
         }
     break;
+        }
 
     case 3:
-        int count=0;
-        for(int i=0; i<(5-1); i++)
         {
-         for(int j=0; j<(5-i-1); j++)
+
+        for(int i=0; i<5; i++)
+        {
+         for(int j=0; j<(5-1); j++)
             {
-            if(s[j].cgpa > s[j+1].cgpa)
-            {
-               swap(s[j],s[j+i]);
-               count++;
+                if(s[j].cgpa > s[j+1].cgpa)
+                {
+                    Student temp=s[j];
+                    s[j]=s[j+1];
+                    s[j+1]=temp;
+                    count++;
+                }
             }
         }
-        }
+
         for(int i=0;i<5;i++)
-        {
-        s[i].display();
-        cout<<"\n";
+            {
+                s[i].display();
+                cout<<"\n";
+            }
+        break;
         }
- break;
+
     case 4:
+        {
         cout<<"Passes:"<<count;
         break;
+        }
+
+   case 5:
+        {
+        float srch;
+        cout<<"Enter Cgpa you wanna search: ";
+        cin>>srch;
+
+        for(int i=0; i<5; i++)
+            {
+                if(s[i].cgpa == srch){
+                s[i].display();
+                cout<<"\n";
+                }
+            }
+
+        break;
+        }
 
 
 default:
-    cout<<"Take proper option:"<<endl;
-
-
+    {
+     cout<<"Take proper option:"<<endl;
+     break;
     }
+    }
+    }while(option!=0);
 
 }
-
