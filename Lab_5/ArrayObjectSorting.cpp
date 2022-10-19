@@ -118,10 +118,14 @@ int main()
 
         for(int i=0; i<5; i++)
             {
-                if(s[i].cgpa == srch){
-                s[i].display();
-                cout<<"\n";
-                }
+                if(s[i].cgpa == srch)
+                    {
+                        s[i].display();
+                        cout<<"\n";
+                    }
+                
+                else
+                    cout<<"Not Found"<<endl;
             }
 
         break;
