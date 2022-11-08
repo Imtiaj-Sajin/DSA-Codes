@@ -1,3 +1,12 @@
+/*Create a product Class and include the following properties there:
+- Product Name
+- Product ID
+- Product Category
+- Unite_Price
+
+Now Create 5 object using the above call and save those object in Product array. 
+Apply bubble sort and selection to sort the elements price wise. Also, provide a searching features by product name*/
+
 #include<iostream>
 using namespace std;
 #include<bits/stdc++.h>
