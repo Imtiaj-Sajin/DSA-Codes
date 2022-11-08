@@ -61,7 +61,7 @@ int main()
     case 2:
         {
         int minIndex =0;
-        cout<<"Your sorted Products: "<<endl;
+        cout<<"Your sorted Products(Selection Sort): "<<endl;
 
        for(int i=0;i<5;i++)
        {
@@ -89,6 +89,7 @@ int main()
 
     case 3:
         {
+        cout<<"Your sorted Products:(Bubble Sort) "<<endl;
 
         for(int i=0; i<5; i++)
         {
