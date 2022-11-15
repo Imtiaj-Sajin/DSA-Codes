@@ -1,15 +1,15 @@
 #include<iostream>
 using namespace std;
-#define size 15;
+
 char Stack[15];
 char postfix[15];
 int top=-1;
+int size=15;
 
 
 
-
-    rear = -1;
-    front = 0;
+    int rear = -1;
+    int front = 0;
 
 
     void enqueue(char a){
@@ -20,13 +20,10 @@ int top=-1;
         }
     }
 
-    void dequeue(){   if(rear < front){
-            cout<<"Queue is empty..."<<endl;
-            return 0;
-        }
+    void dequeue(){
 
-        ++front;
-        return 0;
+        front--;
+
     }
 
 
@@ -34,7 +31,12 @@ void push(char c)
 {
     top++;
     Stack[top]=c;
-    /cout<<Stack[top];
+    //cout<<Stack[top];
+}
+
+void pop()
+{
+    top--;
 }
 
 
@@ -49,6 +51,12 @@ bool isOperator(char c)
 bool isOperand(char c)
 {
     if(c>='0'&c<='9')
+        return true;
+    return false;
+}
+bool isParentheses(char c)
+{
+    if(c=='('||c==')')
         return true;
     return false;
 }
@@ -75,18 +83,34 @@ void convert(string infix)
        char op=infix[i];
        if(isOperand(op))
         enqueue(op);
-       else if(isOperator(op))
+       else if(isParentheses(op))
        {
            if(op='(')
                 push(op);
            else if(op=')')
-
-
+                while(Stack[top]!='(')
+                {
+                    enqueue(Stack[top]);
+                    pop();
+                }
+            pop();
        }
+       else if(isOperator(op))
+       {
+           while(precedence(op)<=precedence(Stack[top]))
+           {
+               enqueue(Stack[top]);
+               pop();
+           }
+           push(op);
+       }
+
 
     i++;
     }while(i<infix.length());
 
+    for(int i=0;i<postfix[].length();i++)
+    cout<<postfix[i];
 }
 
 int main()
