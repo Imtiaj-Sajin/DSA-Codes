@@ -64,12 +64,19 @@ public:
 int main()
 {
     BST b, *root = NULL;
-    root = b.Insert(root, 50);
-    b.Insert(root, 30);
-    b.Insert(root, 20);
+    root = b.Insert(root, 43);
+    b.Insert(root, 31);
+    b.Insert(root, 64);
+    b.Insert(root, 89);
     b.Insert(root, 40);
-
-
+    b.Insert(root, 20);
+    b.Insert(root, 56);
+    b.Insert(root, 47);
+    b.Insert(root, 33);
+    b.Insert(root, 28);
+    b.Insert(root, 59);
+    b.Insert(root, 9);
+    b.Insert(root, 1);
 
    b.Inorder(root);
     return 0;
