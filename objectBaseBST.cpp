@@ -1,64 +1,64 @@
 #include <iostream>
 using namespace std;
-class Student{
-    
+
+class Student
+{
 public:
+    string name, id;
     float cgpa;
-    string name,id;
-    
     Student(string name,string id,float cgpa)
     {
         this->name=name;
         this->id=id;
         this->cgpa=cgpa;
+
     }
     void showData()
     {
         cout<<"Name: "<<name<<endl;
         cout<<"ID: "<<id<<endl;
-        cout<<"Cgpa: "<<cgpa<<endl;
-        
+        cout<<"CGPA: "<<cgpa<<endl;
     }
+    Student(){}
+
+        
 };
+
+
+
 class BST
 {
-    Student s[500];
-    float data,n=0;
+    Student data;
     BST *left, *right;
 
+
+
 public:
-    void addStd(){
-    Student stdnt;
-     cout<<"Name: :";
-        cin>>stdnt.car_no;
-    cout<<"ID:";
-        cin>>stdnt.date;
-    cout<<"cgpa:";
-        cin>>stdnt.ticket_no;
-        stdnt.type=type;
-        
-        BST(stdnt.cgpa);
-        n++;
-    }
     BST(){
-        data = 0;
+        
         left = NULL;
         right =NULL;
     }
 
-    BST(float value){
+
+
+   BST(Student value){
         data = value;
         left = NULL;
         right= NULL;
     }
 
-    BST* Insert(BST* root, int value)
+
+
+   BST* Insert(BST* root, Student value)
     {
         if (!root){
             return new BST(value);
         }
 
-        if (value > root->data){
+
+
+       if (value.cgpa > root->data.cgpa){
             root->right = Insert(root->right, value);
         }
         else{
@@ -67,34 +67,40 @@ public:
         return root;
     }
 
-    void Inorder(BST* root)
+
+
+   void Inorder(BST* root)
     {
         if (!root){
             return;
         }
         Inorder(root->left);
-        cout << root->data << endl;
+        root->data.showData();
+        cout<<endl;
         Inorder(root->right);
     }
 };
 
 
 
+
+
 int main()
 {
+    Student std[]={Student("Ak","332",3.65),
+    Student("sajin","6645",3.09),
+    Student("SAg","3365",1.99),
+    Student("KAbbo","2354",3.00),
+   };
     BST b, *root = NULL;
-    root = b.Insert(root, 43);
-    b.Insert(root, 31);
-    b.Insert(root, 64);
-    b.Insert(root, 89);
-    b.Insert(root, 40);
-    b.Insert(root, 20);
-    b.Insert(root, 56);
-    b.Insert(root, 47);
-    b.Insert(root, 33);
-    b.Insert(root, 28);
-    b.Insert(root, 59);
-
-    b.Inorder(root);
+    root = b.Insert(root, std[0]);
+   
+   for (int i = 1; i < 3; i++)
+   {
+    b.Insert(root,  std[i]); 
+   }
+   
+    
+   b.Inorder(root);
     return 0;
 }
