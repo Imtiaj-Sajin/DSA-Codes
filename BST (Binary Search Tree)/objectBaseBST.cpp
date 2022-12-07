@@ -95,15 +95,15 @@ int main()
     Student("Shafin","6431",2.80),
     Student("Rafi","5641",4.00),
     Student("Mafi","2398",1.00),
-    Student("KAbbo","1245",1.90),
-    Student("KAbbo","6524",3.24),
-    Student("KAbbo","7531",3.88),
+    Student("Lena","1245",1.90),
+    Student("Labib","6524",3.24),
+    Student("Kafi","7531",3.88),
     
    };
     BST b, *root = NULL;
     root = b.Insert(root, std[0]);
    
-   for (int i = 1; i < 3; i++)
+   for (int i = 1; i < sizeof(std)/sizeof(Student); i++)
    {
     b.Insert(root,  std[i]); 
    }
