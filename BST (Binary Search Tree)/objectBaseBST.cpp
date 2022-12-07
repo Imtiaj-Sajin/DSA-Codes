@@ -90,7 +90,15 @@ int main()
     Student std[]={Student("Ak","332",3.65),
     Student("sajin","6645",3.09),
     Student("SAg","3365",1.99),
-    Student("KAbbo","2354",3.00),
+    Student("KAbbo","2354",3.00), Student("Fahmi","9513",2.98),
+    Student("Alex","3245",2.01),
+    Student("Shafin","6431",2.80),
+    Student("Rafi","5641",4.00),
+    Student("Mafi","2398",1.00),
+    Student("KAbbo","1245",1.90),
+    Student("KAbbo","6524",3.24),
+    Student("KAbbo","7531",3.88),
+    
    };
     BST b, *root = NULL;
     root = b.Insert(root, std[0]);
