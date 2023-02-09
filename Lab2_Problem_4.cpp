@@ -1,3 +1,4 @@
+//You have to find repeated number from an array
 #include<iostream>
 using namespace std;
 int main()
