@@ -1,3 +1,4 @@
+// Yuo have to find total common elements from two array
 #include<iostream>
 using namespace std;
 int main(){
