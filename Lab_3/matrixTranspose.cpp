@@ -1,3 +1,4 @@
+//you have to input a matrix fom user, then transpose it
 #include <iostream>
 using namespace std;
 
