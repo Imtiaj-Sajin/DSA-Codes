@@ -1,5 +1,5 @@
 
-//You have to Count number of occurrences (or frequency) from an array
+//You have to Count number of occurrences (or frequency) of every elements from an array
 #include<iostream>
 using namespace std;
 int main()
