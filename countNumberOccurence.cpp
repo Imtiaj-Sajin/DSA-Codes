@@ -1,5 +1,5 @@
 
-//You have to find repeated number from an array
+//You have to Count number of occurrences (or frequency) from an array
 #include<iostream>
 using namespace std;
 int main()
