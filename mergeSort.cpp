@@ -7,7 +7,7 @@ int *mergeList(int* a,int* b,int n,int m)
     int* c=new int[n+m];
     int i=0,j=0,k=0;
 
-    while(i<n && j<n)
+    while(i<n && j<m)
     {
         if(a[i]<b[j])
             c[k++]=a[i++];
@@ -19,7 +19,7 @@ int *mergeList(int* a,int* b,int n,int m)
     {
         c[k++]=a[i++];
     }
-    while
+    while(j<m)
     {
         c[k++]=b[j++];
     }
@@ -28,7 +28,7 @@ int *mergeList(int* a,int* b,int n,int m)
 int printList(int* a,int n)
 {
     for(int i=0;i<n;i++)
-        cout<<a[i];
+        cout<<a[i]<<" ";
         cout<<endl;
 }
 
