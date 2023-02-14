@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-void printList(int* a,int n)
+void printList(int* A,int n)
 {
     for(int i=0;i<n;i++)
-        cout<<a[i];
+        cout<<A[i]<<" ";
         cout<<endl;
 }
 
-void Merge(int *a,int l,int m,int r)
+void Merge(int *A,int l,int m,int r)
 {
     int n1=m-l+1;
     int n2=r-m;
@@ -23,7 +23,7 @@ void Merge(int *a,int l,int m,int r)
 
     for(int j=0;j<n2;j++)
     {
-        r[j]=A[m+1+j];
+        R[j]=A[m+1+j];
     }
 
      int i=0,j=0,k=01;
@@ -61,5 +61,8 @@ void mergeSort(int *m,int left,int right)
 }
 
 int main(){
-
+    int a[]={100,10,200,31,87,9,87,2};
+    printList(a,8);
+    mergeSort(a,0,7);
+    printList(a,8);
 }
