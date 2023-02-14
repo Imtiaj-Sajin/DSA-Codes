@@ -1,4 +1,4 @@
-//this merge sort is for 2 sorted arrays
+//this merge is for 2 sorted arrays
 #include<iostream>
 using namespace std;
 
