@@ -1,3 +1,5 @@
+//you have to find the summation of boundary elements from a matrix
+
 #include <iostream>
 using namespace std;
 
