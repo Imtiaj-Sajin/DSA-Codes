@@ -9,7 +9,7 @@ for(i=1;i<num;i++){
 
     temp = arr[i];//i = starting index
     j =i-1;
-    while ((temp<arr [j])&& (j>=0)){ // j=current index,temp = eoh
+    while ((temp<arr [j])&& (j>=0)){ // j=current index
 
         arr[j+1]=arr[j];
         j=j-1;
