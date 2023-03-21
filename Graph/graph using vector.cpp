@@ -15,9 +15,10 @@ cin>>node>>edge;
         g[v].push_back(u);
     }
 
-for(int i=0;i<node;j++)
+for(int i=0;i<node;i++)
 {
     cout<<i<<"-->";
     for(int j=0;j<g.size();j++)
-    cout<<g[i][j]<<" ";
+     cout<<g[i][j]<<" ";
+}
 }
